@@ -8,7 +8,7 @@ This Flask web application allows users to upload CV documents (PDF or Word form
 - [Installation](#installation)
 - [Configuration](#configuration)
 - [Challenges](#Challenges)
-- [ArchitectureDesign](#ArchitectureDesign)
+- [Architecture Design](#ArchitectureDesign)
 
 ## Features
 
