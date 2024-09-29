@@ -39,10 +39,9 @@ Follow these steps to set up the application on your local machine:
    ```bash
    pip install -r requirements.txt
 
-3. **Run the application:**
+3. **Run the application:** (make sure to check the [Configuration](#configuration) section before you run the app)
     ```bash
     python -m app.run
-
 
 ## Configuration
 
@@ -64,6 +63,6 @@ You can choose between two methods for data extraction in the application:
    - **Automatic Model Download**: When selecting the GPT4ALL model in the application for the first time, the model will automatically be downloaded (approximately 4.66GB in size) and stored locally.
    - **Model Setup**: Once the model is downloaded, the application will use it for processing all subsequent CV uploads.
    - Ensure that you have sufficient disk space and a stable internet connection for the model download.
-   
+
 This provides an efficient, offline alternative to cloud-based AI services, ensuring your data stays private and secure on your local system.
 
