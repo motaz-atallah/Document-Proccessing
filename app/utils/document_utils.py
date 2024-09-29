@@ -2,7 +2,6 @@ import os
 import fitz  # PyMuPDF
 from docx import Document
 
-
 def extract_text_from_pdf(pdf_file):
     """Extract text from a PDF file."""
     text = ""
