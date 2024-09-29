@@ -93,7 +93,7 @@ This provides an efficient, offline alternative to cloud-based AI services, ensu
 
 
 ## ArchitectureDesign
-The architecture of the CV Analyzer Flask Application is designed to facilitate the seamless upload, processing, and extraction of information from CV documents. The system is built using a microservices approach, ensuring modularity and scalability. Below are the key components of the architecture:
+The architecture of the CV Analyzer Flask Application is designed to facilitate the seamless upload, processing, and extraction of information from CV documents. Below are the key components of the architecture:
 
 - **Client Layer**: Web Interface: The client layer consists of a responsive web interface built using HTML, CSS, and Bootstrap. This layer provides users with the ability to upload their CVs, select the extraction method, and view the results in a user-friendly format.
 - **Application Layer**: 
