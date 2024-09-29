@@ -8,7 +8,7 @@ This Flask web application allows users to upload CV documents (PDF or Word form
 - [Installation](#installation)
 - [Configuration](#configuration)
 - [Challenges](#Challenges)
-- [Architecture Design](#ArchitectureDesign)
+- [Architecture Design](#Architecture)
 
 ## Features
 
@@ -92,23 +92,28 @@ This provides an efficient, offline alternative to cloud-based AI services, ensu
 - **Data Privacy**: Ensuring user data privacy when using external APIs was a significant consideration.
 
 
-## ArchitectureDesign
+## Architecture
 The architecture of the CV Analyzer Flask Application is designed to facilitate the seamless upload, processing, and extraction of information from CV documents. Below are the key components of the architecture:
 
 - **Client Layer**: Web Interface: The client layer consists of a responsive web interface built using HTML, CSS, and Bootstrap. This layer provides users with the ability to upload their CVs, select the extraction method, and view the results in a user-friendly format.
 - **Application Layer**: 
    - **Flask Application**: The core of the application is built using Flask, a lightweight Python web framework. This layer handles HTTP requests, manages user sessions, and serves the web pages.
    - **File Upload Handler**: This component is responsible for handling incoming file uploads, ensuring that the files are in the correct format (PDF or Word) and storing them temporarily for processing.
+
 - **Extraction Layer**: Running AI models locally resulted in slower processing times due to memory and CPU constraints. This limitation prompted the exploration of cloud-based alternatives.
+
 - **Data Extraction Options**: The application offers two data extraction methods:
    - **Google Generative AI**: This component interacts with the Google Generative AI API to extract relevant information from the uploaded CVs. It requires an API key for authentication and processes the document content through the API.
    - **gpt4all Meta-Llama-3-8B-Instruct Model**: This component uses the GPT4All Python SDK to load the local LLM model for CV data extraction. The model is downloaded and stored locally, allowing for offline processing of CVs without external dependencies.
+
 - **Processing Layer**: 
    - **Document Parsing**: This component utilizes libraries such as PyPDF2 for PDF parsing and python-docx for Word document parsing. It extracts raw text from the documents, which is then fed into the chosen extraction model for analysis.
    - **Information Structuring**: After extraction, the relevant information (such as personal details, education, and work experience) is structured into a predefined format, ready for display.
+
 - **Storage Layer**: 
    - **Temporary Storage**: Uploaded documents are temporarily stored in a designated directory on the server. This ensures that files can be accessed for processing and removed after the extraction is complete.
    - **Configuration File:**: The application uses a configuration file (config.py) to store sensitive information, such as API keys and model paths, ensuring secure management of credentials
+
 - **User Interface Layer**: 
    - **Result Display**:  After processing, the extracted information is displayed on the user interface in a structured and readable format, allowing users to review the data. Bootstrap is used to enhance the presentation of results.
    
