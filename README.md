@@ -31,22 +31,24 @@ Follow these steps to set up the application on your local machine:
 2. **Create a environment:**
    You can choose one of the following options to create a Python environment for the application:
 
-   Option 1: Using Conda
+   #### Option 1: Using Conda
 
    If you prefer using Conda, follow these steps:
 
    ```bash
    conda create --name cv_analyzer python=3.12
    conda activate cv_analyzer
+   ```
 
-   Option 2: Using venv
+   #### Option 2: Using venv
 
-   If you prefer using Python built-in venv, follow these steps:
+   If you prefer using Python's built-in venv, follow these steps:
 
    ```bash
    python -m venv cv_analyzer_env
    source cv_analyzer_env/bin/activate  # For Linux/macOS
    cv_analyzer_env\Scripts\activate      # For Windows
+   ```
 
 3. **Install the required packages:**
    Make sure you have requirements.txt in the root of your project. Install the dependencies by running::
