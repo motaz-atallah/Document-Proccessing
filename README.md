@@ -86,7 +86,7 @@ This provides an efficient, offline alternative to cloud-based AI services, ensu
 
 ## Challenges
 
-- **Model Selection**: Initially faced challenges in selecting the right AI model for optimal performance. The decision to use gpt4all and Google Generative AI involved extensive testing.
+- **Model Selection**: Initially faced challenges in selecting the right AI model for optimal performance. The decision to use Meta-Llama-3-8B-Instruct.Q4_0 and Google Generative AI involved extensive testing.
 - **Document Parsing**: Different CV formats and layouts led to difficulties in accurately parsing and extracting relevant information.
 - **Resource Limitations**: Running AI models locally resulted in slower processing times due to memory and CPU constraints. This limitation prompted the exploration of cloud-based alternatives.
 - **Data Privacy**: Ensuring user data privacy when using external APIs was a significant consideration.
