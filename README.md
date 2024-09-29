@@ -28,15 +28,17 @@ Follow these steps to set up the application on your local machine:
    git clone <repository-url>
    cd <repository-folder>
 
-
 2. **Create a Conda environment:**
    Open your terminal and run:
    ```bash
    conda create --name cv_analyzer python=3.12
    conda activate cv_analyzer
 
-
 3. **Install the required packages:**
    Make sure you have requirements.txt in the root of your project. Install the dependencies by running::
    ```bash
    pip install -r requirements.txt
+
+3. **Run the application:**
+    ```bash
+    python -m app.run
