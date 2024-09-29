@@ -1,9 +1,9 @@
 import google.generativeai as genai
-import os
 
-from document_utils import process_document
+from app.utils.document_utils import process_document
+from config import Config
 
-genai.configure(api_key="AIzaSyBnjHnK9lBu1LMFZTefvKYPA5gETCXffKU")
+genai.configure(api_key=Config.API_KEY)
 
 def extract_information(file_path):
     text = process_document(file_path)
@@ -33,4 +33,4 @@ def extract_information(file_path):
 if __name__ == "__main__":
     # Replace with your document path
     file_path = "Your-pdf.pdf"  # Change to your actual document path
-    extracted_info = extract_information()
+    extracted_info = extract_information(file_path)

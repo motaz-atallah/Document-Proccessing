@@ -1,5 +1,6 @@
 from gpt4all import GPT4All
-from document_utils import process_document
+
+from app.utils.document_utils import process_document
 
 def extract_information(file_path):
     text = process_document(file_path)
@@ -16,4 +17,4 @@ def extract_information(file_path):
 
 if __name__ == "__main__":
     file_path = "Your-PDF.pdf"  # Change to your actual CV path
-    extracted_info = extract_information()
+    extracted_info = extract_information(file_path)
