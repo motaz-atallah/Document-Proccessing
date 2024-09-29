@@ -28,13 +28,16 @@
             <button type="submit" class="btn btn-primary">Analyze</button>
         </form>
 
+        <div class="alert-container mt-4" id="alert-container" style="display: none;">
+            <div class="alert alert-danger" role="alert" id="alert-message"></div>
+        </div>
+        
         <div class="loader" id="loader"></div> 
         <div id="result-container">
             <h2>Analysis Result</h2>
             <div id="result"></div>
         </div>
     </div>
-
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

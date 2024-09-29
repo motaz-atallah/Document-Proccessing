@@ -23,6 +23,7 @@ document.getElementById("uploadForm").onsubmit = async function (event) {
   document.getElementById("loader").style.display = "block";
   document.getElementById("result-container").style.display = "none";
   document.getElementById("result").textContent = ""; // Clear previous results
+  document.getElementById("alert-container").style.display = "none"; // Hide alert
 
   try {
     const response = await fetch(form.action, {
@@ -38,10 +39,13 @@ document.getElementById("uploadForm").onsubmit = async function (event) {
       document.getElementById("result-container").style.display = "block";
       document.getElementById("result").innerHTML = data.result;
     } else {
-      alert(data.error); // Show error message
+      // Show error message in Bootstrap alert
+      document.getElementById("alert-message").textContent = data.error;
+      document.getElementById("alert-container").style.display = "block"; // Show alert
     }
   } catch (error) {
     document.getElementById("loader").style.display = "none"; // Hide loader
-    alert("An error occurred while uploading the file.");
+    document.getElementById("alert-message").textContent = "An error occurred while uploading the file.";
+    document.getElementById("alert-container").style.display = "block"; // Show alert
   }
 };
