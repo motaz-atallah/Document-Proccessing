@@ -28,18 +28,18 @@ Follow these steps to set up the application on your local machine:
    git clone <repository-url>
    cd <repository-folder>
 
-2. **Create a Conda environment:**
+2. **Create a environment:**
    You can choose one of the following options to create a Python environment for the application:
 
-   #### Option 1: Using Conda
+   ### Option 1: Using Conda
 
    If you prefer using Conda, follow these steps:
 
    ```bash
    conda create --name cv_analyzer python=3.12
    conda activate cv_analyzer
-
-   #### Option 1: Using venv (Python's Built-in Virtual Environment)
+:
+   #### Option 2: Using venv
 
    If you prefer using Python's built-in venv, follow these steps:
 
